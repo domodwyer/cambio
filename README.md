@@ -1,11 +1,11 @@
 #Cambio
 
-A simple dynamic DNS service in-a-box.
+Keeps a DNS record up-to-date when your external IP address changes, as is common with domestic broadband connections.
 
-##How to
+##Instructions
 Assuming you have an [Amazon AWS](https://aws.amazon.com/) account, a domain pointed at Route53, and a hosted zone configured:
 
-1. Create a restricted IAM account (see below), unused by anything else and download the credentials.
+1. Create a restricted IAM account ([see below](https://github.com/domodwyer/cambio#seperate-those-privilages-restricted-iam-account)), unused by anything else and download the credentials.
 2. Configure your [AWS shared credentials file](https://docs.aws.amazon.com/cli/latest/topic/config-vars.html#the-shared-credentials-file)
 3. Run `cambio -zone <hosted-zone-id> -domain <vpn.example.com.>` perodically via cron or the likes.
 
