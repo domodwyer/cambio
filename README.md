@@ -1,8 +1,8 @@
-#Cambio
+# Cambio
 
 Keeps a DNS record up-to-date when your external IP address changes, as is common with domestic broadband connections.
 
-##Instructions
+## Instructions
 Assuming you have an [Amazon AWS](https://aws.amazon.com/) account, a domain pointed at Route53, and a hosted zone configured:
 
 1. Download a [pre-built binary](https://github.com/domodwyer/cambio/releases) or compile from source.
@@ -12,7 +12,7 @@ Assuming you have an [Amazon AWS](https://aws.amazon.com/) account, a domain poi
 
 __Note__: If the record doesn't exist, it will be created automatically.
 
-##Advanced
+## Advanced
 You can configure cambio to use different AWS profiles, set different DNS time-to-live values (default 5 minutes), or create/update different record types with the following arguements:
 ```
 -profile string
@@ -25,7 +25,7 @@ You can configure cambio to use different AWS profiles, set different DNS time-t
     	Time-to-live value (default 300)
 ```
 
-###Seperate those privilages! (Restricted IAM Account)
+### Seperate those privilages! (Restricted IAM Account)
 Please only grant the bare minimum permissions to this IAM account, there's really no need to grant privileges to spin up thirty d2.8xlarge instances to something that changes a DNS record.
 
 Anywhoo:
